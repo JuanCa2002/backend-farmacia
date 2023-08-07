@@ -1,19 +1,24 @@
 package com.ventasservice.ventasservice.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
-public class Venta {
+@Table(name ="sale")
+public class Sale {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.SEQUENCE, generator = "id_Sequence")
+    @SequenceGenerator(name = "id_Sequence", sequenceName = "ID_SEQ")
     private int id;
 
-    private Date date;
+    private Date creationDate;
 
+    @Column(name= "medicine_id")
     private int medicineId;
+
+    private int stockSale;
 
     private double unitValue;
 
@@ -27,12 +32,20 @@ public class Venta {
         this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public int getStockSale() {
+        return stockSale;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setStockSale(int stockSale) {
+        this.stockSale = stockSale;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
     }
 
     public int getMedicineId() {
@@ -59,6 +72,6 @@ public class Venta {
         this.totalValue = totalValue;
     }
 
-    public Venta() {
+    public Sale() {
     }
 }

@@ -8,11 +8,11 @@
 		<version>3.1.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ventas-service</groupId>
-	<artifactId>ventas-service</artifactId>
+	<groupId>com.sales-service</groupId>
+	<artifactId>sales-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ventas-service</name>
-	<description>Microservicio enfocado en las funcionalidades de las ventas</description>
+	<name>sales-service</name>
+	<description>Microservicio enfocado en las funcionalidades de las sales</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
