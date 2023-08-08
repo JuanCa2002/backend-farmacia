@@ -49,6 +49,16 @@ public class MedicineController {
         }
     }
 
+    @GetMapping("/laboratory/{laboratoryId}")
+    public ResponseEntity<List<Medicine>> getMedicinesByLaboratory(@PathVariable int laboratoryId){
+        List<Medicine> medicines = medicineService.getMedicinesByLaboratory(laboratoryId);
+        if(medicines.isEmpty()){
+            return ResponseEntity.noContent().build();
+        }else{
+            return ResponseEntity.ok(medicines);
+        }
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Medicine> deleteMedicine(@PathVariable int id){
         Medicine medicine = medicineService.getById(id);
@@ -88,7 +98,7 @@ public class MedicineController {
         if(medicine == null){
             return ResponseEntity.noContent().build();
         }else{
-            medicine.setStock(stock);
+            medicine.setStock(medicine.getStock()-stock);
             medicineService.createMedicine(medicine);
             return ResponseEntity.ok(medicine);
         }
