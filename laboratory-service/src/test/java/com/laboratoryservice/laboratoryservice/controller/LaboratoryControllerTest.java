@@ -116,8 +116,7 @@ public class LaboratoryControllerTest {
                     .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(1))
                     .andExpect(MockMvcResultMatchers.jsonPath("$.laboratoryName").value("Updated Lab A"));
       }
-
-
+      
 
 
 }

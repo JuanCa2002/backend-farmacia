@@ -88,5 +88,13 @@ public class Medicine {
     public Medicine() {
     }
 
-
+    public Medicine(int id, String name, Date fabricationDate, Date dueDate, int stock, double unitValue, int laboratoryId) {
+        this.id = id;
+        this.name = name;
+        this.fabricationDate = fabricationDate;
+        this.dueDate = dueDate;
+        this.stock = stock;
+        this.unitValue = unitValue;
+        this.laboratoryId = laboratoryId;
+    }
 }

@@ -74,4 +74,13 @@ public class Sale {
 
     public Sale() {
     }
+
+    public Sale(int id, Date creationDate, int medicineId, int stockSale, double unitValue, double totalValue) {
+        this.id = id;
+        this.creationDate = creationDate;
+        this.medicineId = medicineId;
+        this.stockSale = stockSale;
+        this.unitValue = unitValue;
+        this.totalValue = totalValue;
+    }
 }
