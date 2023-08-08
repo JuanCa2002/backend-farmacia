@@ -147,7 +147,7 @@ public class MedicineControllerTest {
     }
 
     @Test
-    public void deleteMedicineByLaboratory() throws Exception{
+    public void deleteMedicineById() throws Exception{
         Laboratory existingLaboratoryOne = new Laboratory();
         existingLaboratoryOne.setId(2);
         existingLaboratoryOne.setLaboratoryName("Lab B");
