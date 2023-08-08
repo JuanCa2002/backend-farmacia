@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -46,6 +47,16 @@ public class SalesController {
             return ResponseEntity.noContent().build();
         }else{
             return ResponseEntity.ok(sale);
+        }
+    }
+
+    @GetMapping("/dates/{dateOne}/{dateTwo}")
+    public ResponseEntity<List<Sale>> getSalesByDateRange(@PathVariable String dateOne, @PathVariable String dateTwo){
+        List<Sale> sales = saleService.getSalesByDateRange(dateOne, dateTwo);
+        if(sales.isEmpty()){
+            return ResponseEntity.noContent().build();
+        }else{
+            return ResponseEntity.ok(sales);
         }
     }
 }

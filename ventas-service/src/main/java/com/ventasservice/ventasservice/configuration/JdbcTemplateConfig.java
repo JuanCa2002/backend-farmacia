@@ -1,4 +1,4 @@
-package com.medicineservice.medicineservice.configuration;
+package com.ventasservice.ventasservice.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
