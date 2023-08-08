@@ -32,4 +32,9 @@ public class Laboratory {
 
     public Laboratory() {
     }
+
+    public Laboratory(int id, String laboratoryName) {
+        this.id = id;
+        this.laboratoryName = laboratoryName;
+    }
 }
